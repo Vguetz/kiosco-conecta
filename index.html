@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="es-UY">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#08080A" />
+    <title>
+      Kiosco Conecta — Más que un kiosco, una conexión que transforma
+    </title>
+    <meta
+      name="description"
+      content="Kiosco Conecta: productos de todos los días con causa social. Parte de nuestras ganancias se destinan a desayunos y útiles para estudiantes de el Instituto Superior de Comercio La Blanqueada."
+    />
+    <meta property="og:title" content="Kiosco Conecta" />
+    <meta property="og:description" content="Compra + causa social." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400..900;1,400..900&family=Caveat:wght@500..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ============ FILTROS GOO ============ -->
+    <svg class="svg-defs" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -9"
+            result="goo"
+          />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+        <filter id="goo-soft">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 16 -7"
+          />
+        </filter>
+        <filter id="goo-heavy">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="14" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 24 -11"
+          />
+        </filter>
+      </defs>
+    </svg>
+
+    <!-- ============ PRELOADER ============ -->
+    <div class="preloader" id="preloader">
+      <div class="preloader__goo" style="filter: url(#goo-heavy)">
+        <span class="pl-blob pl-blob--1"></span>
+        <span class="pl-blob pl-blob--2"></span>
+        <span class="pl-blob pl-blob--3"></span>
+        <span class="pl-blob pl-blob--core"></span>
+      </div>
+      <div class="preloader__mark">
+        <span class="preloader__k">KIOSCO</span>
+        <span class="preloader__c">CONECTA</span>
+      </div>
+      <div class="preloader__bar"><i></i></div>
+    </div>
+
+    <!-- ============ CURSOR ============ -->
+    <div class="cursor" id="cursor" aria-hidden="true">
+      <div class="cursor__goo" style="filter: url(#goo-soft)">
+        <span class="cursor__dot"></span>
+        <span class="cursor__ring"></span>
+      </div>
+      <span class="cursor__label"></span>
+    </div>
+
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="nav">
+      <a class="nav__logo" href="#inicio" data-cursor="Inicio">
+        <span class="nav__logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><use href="#logo-mark" /></svg>
+        </span>
+        <span class="nav__logo-text">
+          <b>KIOSCO</b>
+          <i>CONECTA</i>
+        </span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Navegación principal">
+        <span class="nav__pill" id="navPill" aria-hidden="true"></span>
+        <a href="#inicio" class="nav__link is-active">Inicio</a>
+        <a href="#nosotras" class="nav__link">Nosotras</a>
+        <a href="#productos" class="nav__link">Productos</a>
+        <a href="#causa" class="nav__link">Causa solidaria</a>
+        <a href="#contacto" class="nav__link">Contacto</a>
+      </nav>
+
+      <button
+        class="burger"
+        id="burger"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        <span class="burger__goo" style="filter: url(#goo)">
+          <i></i><i></i><i></i>
+        </span>
+      </button>
+    </header>
+
+    <!-- ============ MENU MOBILE ============ -->
+    <div
+      class="menu"
+      id="menu"
+      role="dialog"
+      aria-label="Menú"
+      aria-modal="true"
+    >
+      <div class="menu__goo" style="filter: url(#goo-heavy)" aria-hidden="true">
+        <span class="menu__blob menu__blob--a"></span>
+        <span class="menu__blob menu__blob--b"></span>
+        <span class="menu__sheet"></span>
+      </div>
+      <nav class="menu__inner">
+        <a href="#inicio" class="menu__link"><em>01</em> Inicio</a>
+        <a href="#nosotras" class="menu__link"><em>02</em> Nosotras</a>
+        <a href="#productos" class="menu__link"><em>03</em> Productos</a>
+        <a href="#causa" class="menu__link"><em>05</em> Causa solidaria</a>
+        <a href="#contacto" class="menu__link"><em>06</em> Contacto</a>
+        <div class="menu__foot">
+          <a href="#" data-wa class="menu__wa">091 234 567 · WhatsApp</a>
+          <span>Joaquín Secco Illa y 8 de Octubre</span>
+        </div>
+      </nav>
+    </div>
+
+    <main id="app">
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="inicio">
+        <div class="hero__aura" aria-hidden="true">
+          <span class="aura aura--y"></span>
+          <span class="aura aura--p"></span>
+        </div>
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow" data-reveal>
+              <span class="eyebrow__dot"></span> Kiosco de barrio · Montevideo
+            </p>
+            <h1 class="hero__title">
+              <span class="line"
+                ><span class="w">MÁS</span> <span class="w">QUE</span>
+                <span class="w">UN</span> <span class="w">KIOSCO,</span></span
+              >
+              <span class="line line--y"
+                ><span class="w">UNA</span>
+                <span class="w">CONEXIÓN</span></span
+              >
+              <span class="line line--p"
+                ><span class="w">QUE</span>
+                <span class="w">TRANSFORMA</span></span
+              >
+            </h1>
+            <p class="hero__lead" data-reveal>
+              En Kiosco Conecta no solo comprás productos de calidad, también
+              conectás con una causa social.
+            </p>
+
+            <div class="hero__note" data-reveal>
+              <svg
+                class="ico ico--heart"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <use href="#i-heart" />
+              </svg>
+              <p>
+                Parte de nuestras ganancias se destinan a donaciones de
+                <b>desayunos y útiles</b> para estudiantes de el Instituto
+                Superior de Comercio La Blanqueada.
+              </p>
+            </div>
+
+            <div class="hero__actions" data-reveal>
+              <a href="#causa" class="btn btn--yellow" data-cursor="Ver causa">
+                <span class="btn__blob"></span>
+                <span class="btn__label"
+                  >Conocé nuestra causa
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-heart" />
+                  </svg>
+                </span>
+              </a>
+              <a href="#productos" class="btn btn--ghost" data-cursor="Ver">
+                <span class="btn__blob"></span>
+                <span class="btn__label">Ver productos</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__stage">
+            <div class="hero__halo" aria-hidden="true"></div>
+            <div class="hero__floaters" aria-hidden="true" data-floaters></div>
+            <div class="hero__bag" data-bag>
+              <div class="bag__peek" data-peek aria-hidden="true"></div>
+              <svg viewBox="0 0 360 430" class="bag">
+                <use href="#bag-art" />
+              </svg>
+            </div>
+            <span class="scribble scribble--1" aria-hidden="true"
+              ><svg viewBox="0 0 60 60"><use href="#i-spark" /></svg
+            ></span>
+            <span class="scribble scribble--2" aria-hidden="true"
+              ><svg viewBox="0 0 60 60"><use href="#i-spark" /></svg
+            ></span>
+            <p class="hero__thanks" aria-hidden="true">
+              Gracias por ser<br />parte del cambio
+            </p>
+          </div>
+
+          <ul class="pillars" aria-label="Nuestros valores">
+            <li class="pillar" data-pillar>
+              <span class="pillar__ico pillar__ico--p"
+                ><svg viewBox="0 0 24 24"><use href="#i-heart" /></svg
+              ></span>
+              <div>
+                <h3>Compra</h3>
+                <p>Elegí lo que necesitás</p>
+              </div>
+            </li>
+            <li class="pillar" data-pillar>
+              <span class="pillar__ico pillar__ico--y"
+                ><svg viewBox="0 0 24 24"><use href="#i-hands" /></svg
+              ></span>
+              <div>
+                <h3>Conecta</h3>
+                <p>Con tu comunidad</p>
+              </div>
+            </li>
+            <li class="pillar" data-pillar>
+              <span class="pillar__ico pillar__ico--p"
+                ><svg viewBox="0 0 24 24"><use href="#i-smile" /></svg
+              ></span>
+              <div>
+                <h3>Colabora</h3>
+                <p>Con cada compra</p>
+              </div>
+            </li>
+            <li class="pillar" data-pillar>
+              <span class="pillar__ico pillar__ico--y"
+                ><svg viewBox="0 0 24 24"><use href="#i-heart" /></svg
+              ></span>
+              <div>
+                <h3>Transforma</h3>
+                <p>Realidades</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <a class="scroll-hint" href="#nosotras" aria-label="Bajar">
+          <span class="scroll-hint__track"><i></i></span>
+          <em>scroll</em>
+        </a>
+      </section>
+
+      <!-- ============ MARQUEE ============ -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track" data-marquee>
+          <span>compra con propósito</span><span class="dot">&#10022;</span>
+          <span>4 socias, un mismo sueño</span><span class="dot">&#10022;</span>
+          <span>10% para la causa</span><span class="dot">&#10022;</span>
+        </div>
+      </div>
+
+      <!-- ============ NOSOTRAS ============ -->
+      <section class="section section--cream" id="nosotras">
+        <div class="wrap">
+          <header class="shead">
+            <h2 class="shead__title" data-split>NOSOTRAS</h2>
+            <p class="shead__sub">quiénes somos</p>
+            <p class="shead__lead" data-reveal>
+              Somos
+              <b
+                >4 socias y estudiantes de el Instituto Superior de Comercio La
+                Blanqueada</b
+              >
+              con un mismo propósito: crear un kiosco diferente, donde cada
+              compra genera un impacto positivo.
+            </p>
+          </header>
+
+          <div class="team" data-team></div>
+
+          <div class="mission">
+            <article class="mission__card" data-reveal>
+              <span class="mission__ico"
+                ><svg viewBox="0 0 24 24"><use href="#i-target" /></svg
+              ></span>
+              <h3>Nuestra misión</h3>
+              <p>
+                Ofrecer productos de calidad y un servicio cercano, generando
+                oportunidades y apoyo para nuestra comunidad educativa.
+              </p>
+            </article>
+            <span class="mission__rule" aria-hidden="true"></span>
+            <article class="mission__card" data-reveal>
+              <span class="mission__ico mission__ico--p"
+                ><svg viewBox="0 0 24 24"><use href="#i-heart" /></svg
+              ></span>
+              <h3>Nuestro propósito</h3>
+              <p>
+                Conectar tu día a día con acciones que transforman realidades,
+                una compra a la vez.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PRODUCTOS ============ -->
+
+      <!-- TODO: aca poner fotos reales de los productos -->
+      <section class="section section--dark" id="productos">
+        <div class="wrap">
+          <header class="shead shead--dark">
+            <h2 class="shead__title" data-split>PRODUCTOS</h2>
+            <p class="shead__sub">para tu día a día</p>
+            <p class="shead__lead" data-reveal>
+              Tocá los productos que quieras y armá tu pedido.
+            </p>
+          </header>
+
+          <div class="filters" data-filters>
+            <div class="filters__goo" style="filter: url(#goo)">
+              <span class="filters__pill" data-filter-pill></span>
+            </div>
+          </div>
+
+          <div class="grid" data-grid></div>
+
+          <div class="order-cta" data-reveal>
+            <div class="order-cta__text">
+              <h3>Hacé tu pedido<br /><span>fácil y rápido</span></h3>
+              <p>
+                Elegí lo que querés y pedilo por WhatsApp. Te respondemos al
+                toque y te lo llevamos.
+              </p>
+            </div>
+            <a href="#" data-wa class="btn btn--wa btn--lg" data-cursor="Pedir">
+              <span class="btn__blob"></span>
+              <span class="btn__label"
+                >Pedí ahora
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-wa" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- ============ CAUSA ============ -->
+      <section class="section section--cause" id="causa">
+        <div class="wrap">
+          <header class="shead shead--dark shead--center">
+            <p class="shead__sub shead__sub--top">el corazón del proyecto</p>
+            <h2 class="shead__title" data-split>CAUSA SOLIDARIA</h2>
+            <p class="shead__lead" data-reveal>
+              El <b>10% de nuestras ganancias</b> se destina a donaciones de
+              desayunos y útiles escolares para estudiantes de el Instituto
+              Superior de Comercio La Blanqueada. Cada compra que hacés acá
+              vuelve al barrio.
+            </p>
+          </header>
+
+          <div class="cause">
+            <div class="cause__box" data-reveal>
+              <svg viewBox="0 0 340 260" aria-hidden="true">
+                <use href="#box-art" />
+              </svg>
+            </div>
+
+            <div class="cause__stats">
+              <p class="cause__label">
+                ¡Lo que hemos <mark>logrado juntas</mark>!
+              </p>
+              <div class="stats">
+                <div class="stat" data-stat>
+                  <span class="stat__ico"
+                    ><svg viewBox="0 0 24 24"><use href="#i-cup" /></svg
+                  ></span>
+                  <b class="stat__num" data-count="120">0</b>
+                  <span class="stat__cap">desayunos<br />entregados</span>
+                </div>
+                <div class="stat" data-stat>
+                  <span class="stat__ico"
+                    ><svg viewBox="0 0 24 24"><use href="#i-pencil" /></svg
+                  ></span>
+                  <b class="stat__num" data-count="85">0</b>
+                  <span class="stat__cap">kits de útiles<br />escolares</span>
+                </div>
+                <div class="stat" data-stat>
+                  <span class="stat__ico"
+                    ><svg viewBox="0 0 24 24"><use href="#i-hands" /></svg
+                  ></span>
+                  <b
+                    class="stat__num"
+                    data-count="9"
+                    data-prefix="$"
+                    data-suffix="k"
+                    >0</b
+                  >
+                  <span class="stat__cap">pesos donados<br />en el año</span>
+                </div>
+              </div>
+
+              <div class="goal" data-goal>
+                <div class="goal__top">
+                  <span>Meta 2026: 200 desayunos</span
+                  ><b><i data-goal-num>0</i>%</b>
+                </div>
+                <div class="goal__bar"><i data-goal-bar></i></div>
+              </div>
+
+              <p class="cause__foot">
+                Seguimos conectando para hacer más
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-heart" />
+                </svg>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACTO ============ -->
+      <section class="section section--cream" id="contacto">
+        <div class="wrap contacto">
+          <div class="contacto__left">
+            <h2 class="shead__title" data-split>CONTACTO</h2>
+            <p class="contacto__hand">Estamos para vos</p>
+
+            <ul class="contact-list">
+              <li data-reveal>
+                <span class="ci ci--wa"
+                  ><svg viewBox="0 0 24 24"><use href="#i-wa" /></svg
+                ></span>
+                <div>
+                  <b>091 234 567</b><span>Escribinos por WhatsApp</span>
+                </div>
+              </li>
+              <li data-reveal>
+                <span class="ci ci--ig"
+                  ><svg viewBox="0 0 24 24"><use href="#i-ig" /></svg
+                ></span>
+                <div>
+                  <b>@kioscoconecta</b><span>Seguinos en Instagram</span>
+                </div>
+              </li>
+              <li data-reveal>
+                <span class="ci"
+                  ><svg viewBox="0 0 24 24"><use href="#i-pin" /></svg
+                ></span>
+                <div>
+                  <b>Joaquín Secco Illa y 8 de Octubre</b
+                  ><span>Montevideo, Uruguay</span>
+                </div>
+              </li>
+              <li data-reveal>
+                <span class="ci"
+                  ><svg viewBox="0 0 24 24"><use href="#i-clock" /></svg
+                ></span>
+                <div>
+                  <b>Lunes a viernes 7:00 a 23:00</b
+                  ><span>Sábados 8:00 a 14:00 · Domingos cerrado</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="map" data-reveal aria-label="Ubicación del kiosco">
+              <svg class="map__art" viewBox="0 0 520 300" aria-hidden="true">
+                <use href="#map-art" />
+              </svg>
+              <span class="map__pin">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-pin" />
+                </svg>
+                <b>Kiosco<br />Conecta</b>
+              </span>
+            </div>
+          </div>
+
+          <form class="form" id="form" novalidate>
+            <h3 class="form__title">
+              Hacé tu pedido<br /><span>o dejanos tu consulta</span>
+            </h3>
+            <div class="field">
+              <input
+                type="text"
+                id="f-name"
+                name="nombre"
+                required
+                placeholder=" "
+                autocomplete="name"
+              />
+              <label for="f-name">Tu nombre</label>
+            </div>
+            <div class="field">
+              <input
+                type="tel"
+                id="f-phone"
+                name="telefono"
+                placeholder=" "
+                autocomplete="tel"
+              />
+              <label for="f-phone">Teléfono (opcional)</label>
+            </div>
+            <div class="field">
+              <input
+                type="text"
+                id="f-address"
+                name="direccion"
+                placeholder=" "
+                autocomplete="street-address"
+              />
+              <label for="f-address">Dirección de entrega</label>
+            </div>
+            <div class="field">
+              <textarea
+                id="f-msg"
+                name="mensaje"
+                rows="4"
+                placeholder=" "
+              ></textarea>
+              <label for="f-msg">Tu pedido o consulta</label>
+            </div>
+            <p class="form__hint" data-form-hint>
+              Se abre WhatsApp con el mensaje ya escrito. Vos solo apretás
+              enviar.
+            </p>
+            <button
+              type="submit"
+              class="btn btn--wa btn--full"
+              data-cursor="Enviar"
+            >
+              <span class="btn__blob"></span>
+              <span class="btn__label"
+                >Enviar por WhatsApp
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#i-wa" />
+                </svg>
+              </span>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ============ FOOTER ============ -->
+      <footer class="footer">
+        <div class="wrap">
+          <div class="footer__mark">
+            <span class="footer__logo"
+              ><svg viewBox="0 0 64 64"><use href="#logo-mark" /></svg
+            ></span>
+            <p class="footer__name">KIOSCO <span>CONECTA</span></p>
+            <p class="footer__claim">
+              Conectamos tu día a día con lo que realmente importa.
+            </p>
+          </div>
+          <nav class="footer__nav" aria-label="Pie de página">
+            <a href="#inicio">Inicio</a><a href="#nosotras">Nosotras</a
+            ><a href="#productos">Productos</a> ><a href="#causa"
+              >Causa solidaria</a
+            ><a href="#contacto">Contacto</a>
+          </nav>
+          <p class="footer__legal">
+            Proyecto final de estudio · Instituto Superior de Comercio La
+            Blanqueada · Montevideo · <span>2026</span><br />
+            <small
+              >Kiosco Conecta es un emprendimiento ficticio creado con fines
+              educativos.</small
+            >
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <!-- ============ FAB PEDIDO ============ -->
+    <div class="fab" id="fab">
+      <div class="fab__goo" style="filter: url(#goo)">
+        <span class="fab__satellite" data-sat></span>
+        <span class="fab__disc"></span>
+      </div>
+      <button
+        class="fab__btn"
+        id="fabBtn"
+        aria-label="Ver mi pedido"
+        aria-expanded="false"
+      >
+        <svg class="fab__ico" viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#i-cart" />
+        </svg>
+        <span class="fab__count" data-fab-count>0</span>
+      </button>
+    </div>
+
+    <!-- ============ DRAWER PEDIDO ============ -->
+    <aside class="drawer" id="drawer" aria-label="Mi pedido" aria-hidden="true">
+      <div class="drawer__head">
+        <h3>Mi pedido</h3>
+        <button class="drawer__close" id="drawerClose" aria-label="Cerrar">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#i-close" />
+          </svg>
+        </button>
+      </div>
+      <div class="drawer__body" data-drawer-body></div>
+      <div class="drawer__foot">
+        <div class="drawer__totals" data-drawer-totals></div>
+        <a
+          href="#"
+          class="btn btn--wa btn--full"
+          data-drawer-send
+          data-cursor="Enviar"
+        >
+          <span class="btn__blob"></span>
+          <span class="btn__label"
+            >Comprar
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#i-wa" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
