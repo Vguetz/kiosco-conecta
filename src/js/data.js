@@ -250,7 +250,7 @@ export const SOCIAS = [
   {
     nombre: "Candela",
     rol: "Compras y proveedores",
-    avatar: "public/candela.jpg",
+    avatar: "candela.jpg",
     frase:
       "Elijo cada producto pensando en lo que el barrio realmente necesita.",
     art: {
@@ -264,7 +264,7 @@ export const SOCIAS = [
   {
     nombre: "Nicole",
     rol: "Redes y comunicación",
-    avatar: "public/nicol.jpg",
+    avatar: "nicol.jpg",
     frase: "Contamos lo que hacemos para que cada compra tenga sentido.",
     art: {
       skin: "#C98A63",
@@ -277,7 +277,7 @@ export const SOCIAS = [
   {
     nombre: "Avril",
     rol: "Envíos y logística",
-    avatar: "public/avril.jpg",
+    avatar: "avril.jpg",
     frase: "Si está a menos de quince cuadras, te llega calentito.",
     art: {
       skin: "#F0D0B4",
@@ -290,7 +290,7 @@ export const SOCIAS = [
   {
     nombre: "Sintia",
     rol: "Causa solidaria",
-    avatar: "public/no-tiene-tia.jpg",
+    avatar: "no-tiene-tia.jpg",
     frase:
       "Cada mes armamos los desayunos que se reparten en el Instituto Superior de Comercio La Blanqueada.",
     art: {
