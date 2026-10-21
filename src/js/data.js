@@ -26,7 +26,8 @@ export const PRODUCTOS = [
   /* ---------- BEBIDAS ---------- */
   {
     id: "cola-15",
-    nombre: "Refresco cola 1,5 L",
+    nombre: "Coca-Cola Original 1,5 L",
+    img: "productos/cola-15.jpg",
     cat: "bebidas",
     precio: 135,
     tag: "El clásico",
@@ -35,7 +36,8 @@ export const PRODUCTOS = [
   },
   {
     id: "lata-cola",
-    nombre: "Lata de refresco 354 ml",
+    nombre: "Coca-Cola lata 310 ml",
+    img: "productos/lata-cola.jpg",
     cat: "bebidas",
     precio: 70,
     art: "can",
@@ -43,7 +45,8 @@ export const PRODUCTOS = [
   },
   {
     id: "lata-lima",
-    nombre: "Lata lima-limón 354 ml",
+    nombre: "Sprite Zero lata 310 ml",
+    img: "productos/lata-lima.jpg",
     cat: "bebidas",
     precio: 70,
     art: "can",
@@ -51,7 +54,8 @@ export const PRODUCTOS = [
   },
   {
     id: "agua",
-    nombre: "Agua mineral 600 ml",
+    nombre: "Agua Salus sin gas 600 ml",
+    img: "productos/agua.jpg",
     cat: "bebidas",
     precio: 55,
     tag: "Fría",
@@ -60,7 +64,8 @@ export const PRODUCTOS = [
   },
   {
     id: "jugo",
-    nombre: "Jugo en caja 200 ml",
+    nombre: "Jugo Ades manzana 200 ml",
+    img: "productos/jugo.jpg",
     cat: "bebidas",
     precio: 45,
     art: "juiceBox",
@@ -68,7 +73,8 @@ export const PRODUCTOS = [
   },
   {
     id: "energizante",
-    nombre: "Energizante 250 ml",
+    nombre: "Red Bull 250 ml",
+    img: "productos/energizante.jpg",
     cat: "bebidas",
     precio: 150,
     art: "can",
@@ -78,7 +84,8 @@ export const PRODUCTOS = [
   /* ---------- GOLOSINAS ---------- */
   {
     id: "alfajor",
-    nombre: "Alfajor de chocolate",
+    nombre: "Alfajor Portezuelo chocolate",
+    img: "productos/alfajor.jpg",
     cat: "golosinas",
     precio: 75,
     tag: "Más pedido",
@@ -87,7 +94,8 @@ export const PRODUCTOS = [
   },
   {
     id: "chocolate",
-    nombre: "Barra de chocolate 90 g",
+    nombre: "Chocolate Milka leche 150 g",
+    img: "productos/chocolate.jpg",
     cat: "golosinas",
     precio: 130,
     art: "chocoBar",
@@ -95,7 +103,8 @@ export const PRODUCTOS = [
   },
   {
     id: "chicles",
-    nombre: "Chicles sin azúcar",
+    nombre: "Chicles Beldent menta",
+    img: "productos/chicles.jpg",
     cat: "golosinas",
     precio: 55,
     art: "gum",
@@ -103,7 +112,8 @@ export const PRODUCTOS = [
   },
   {
     id: "caramelos",
-    nombre: "Caramelos surtidos 100 g",
+    nombre: "Butter Toffees dulce de leche 80 g",
+    img: "productos/caramelos.jpg",
     cat: "golosinas",
     precio: 80,
     art: "candyBag",
@@ -111,7 +121,8 @@ export const PRODUCTOS = [
   },
   {
     id: "galletitas",
-    nombre: "Galletitas dulces",
+    nombre: "Galletitas Oreo 117 g",
+    img: "productos/galletitas.jpg",
     cat: "golosinas",
     precio: 90,
     art: "cookiePack",
@@ -119,7 +130,8 @@ export const PRODUCTOS = [
   },
   {
     id: "obleas",
-    nombre: "Obleas rellenas",
+    nombre: "Obleas Portezuelo chocolate 80 g",
+    img: "productos/obleas.jpg",
     cat: "golosinas",
     precio: 65,
     art: "chocoBar",
@@ -129,7 +141,8 @@ export const PRODUCTOS = [
   /* ---------- SNACKS ---------- */
   {
     id: "papas",
-    nombre: "Papas fritas 90 g",
+    nombre: "Papas Lay's clásicas 235 g",
+    img: "productos/papas.jpg",
     cat: "snacks",
     precio: 145,
     tag: "Destacado",
@@ -138,7 +151,8 @@ export const PRODUCTOS = [
   },
   {
     id: "nachos",
-    nombre: "Nachos de maíz 85 g",
+    nombre: "Doritos queso 90 g",
+    img: "productos/nachos.jpg",
     cat: "snacks",
     precio: 150,
     art: "chipsBag",
@@ -146,7 +160,8 @@ export const PRODUCTOS = [
   },
   {
     id: "palitos",
-    nombre: "Palitos salados 100 g",
+    nombre: "Cheetos palitos de queso 110 g",
+    img: "productos/palitos.jpg",
     cat: "snacks",
     precio: 85,
     art: "chipsBag",
@@ -154,7 +169,8 @@ export const PRODUCTOS = [
   },
   {
     id: "mani",
-    nombre: "Maní salado 100 g",
+    nombre: "Maní japonés Crock 100 g",
+    img: "productos/mani.jpg",
     cat: "snacks",
     precio: 75,
     art: "peanutPack",
@@ -164,7 +180,8 @@ export const PRODUCTOS = [
   /* ---------- PAPELERÍA ---------- */
   {
     id: "cuaderno",
-    nombre: "Cuaderno A4 80 hojas",
+    nombre: "Cuaderno Playschool rayado 96 hojas",
+    img: "productos/cuaderno.jpg",
     cat: "papeleria",
     precio: 190,
     tag: "Para clase",
@@ -173,7 +190,8 @@ export const PRODUCTOS = [
   },
   {
     id: "biromes",
-    nombre: "Pack de biromes x4",
+    nombre: "Biromes BIC Cristal x4",
+    img: "productos/biromes.jpg",
     cat: "papeleria",
     precio: 110,
     art: "pens",
@@ -181,7 +199,8 @@ export const PRODUCTOS = [
   },
   {
     id: "marcadores",
-    nombre: "Marcadores de color x5",
+    nombre: "Marcadores Campus x12",
+    img: "productos/marcadores.jpg",
     cat: "papeleria",
     precio: 220,
     art: "markers",
@@ -189,7 +208,8 @@ export const PRODUCTOS = [
   },
   {
     id: "repuesto",
-    nombre: "Repuesto de hojas x48",
+    nombre: "Cuadernola Playschool rayada 96 hojas",
+    img: "productos/repuesto.jpg",
     cat: "papeleria",
     precio: 95,
     art: "notebook",
@@ -199,7 +219,8 @@ export const PRODUCTOS = [
   /* ---------- CUIDADO PERSONAL ---------- */
   {
     id: "gel",
-    nombre: "Alcohol en gel 250 ml",
+    nombre: "Alcohol en gel Nobb's 280 ml",
+    img: "productos/gel.jpg",
     cat: "cuidado",
     precio: 120,
     art: "gelBottle",
@@ -207,7 +228,8 @@ export const PRODUCTOS = [
   },
   {
     id: "panuelos",
-    nombre: "Pañuelos descartables",
+    nombre: "Pañuelos Elite pocket x6",
+    img: "productos/panuelos.jpg",
     cat: "cuidado",
     precio: 50,
     art: "tissues",
@@ -215,7 +237,8 @@ export const PRODUCTOS = [
   },
   {
     id: "jabon",
-    nombre: "Jabón de tocador",
+    nombre: "Jabón Palmolive Naturals 85 g",
+    img: "productos/jabon.jpg",
     cat: "cuidado",
     precio: 70,
     art: "soap",
@@ -227,6 +250,7 @@ export const SOCIAS = [
   {
     nombre: "Candela",
     rol: "Compras y proveedores",
+    avatar: "public/candela.jpg",
     frase:
       "Elijo cada producto pensando en lo que el barrio realmente necesita.",
     art: {
@@ -240,6 +264,7 @@ export const SOCIAS = [
   {
     nombre: "Nicole",
     rol: "Redes y comunicación",
+    avatar: "public/nicol.jpg",
     frase: "Contamos lo que hacemos para que cada compra tenga sentido.",
     art: {
       skin: "#C98A63",
@@ -252,6 +277,7 @@ export const SOCIAS = [
   {
     nombre: "Avril",
     rol: "Envíos y logística",
+    avatar: "public/avril.jpg",
     frase: "Si está a menos de quince cuadras, te llega calentito.",
     art: {
       skin: "#F0D0B4",
@@ -264,6 +290,7 @@ export const SOCIAS = [
   {
     nombre: "Sintia",
     rol: "Causa solidaria",
+    avatar: "public/no-tiene-tia.jpg",
     frase:
       "Cada mes armamos los desayunos que se reparten en el Instituto Superior de Comercio La Blanqueada.",
     art: {

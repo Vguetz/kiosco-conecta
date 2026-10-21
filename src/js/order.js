@@ -168,7 +168,7 @@ function renderDrawer() {
 
   body.innerHTML = items.map((l) => `
     <div class="dline" data-line="${l.id}">
-      <span class="dline__art">${renderArt(l.art, l.opts)}</span>
+      <span class="dline__art">${l.img ? `<img src="${l.img}" alt="">` : renderArt(l.art, l.opts)}</span>
       <span>
         <b>${l.nombre}</b>
         <span>${money(l.precio)} c/u · ${money(l.importe)}</span>

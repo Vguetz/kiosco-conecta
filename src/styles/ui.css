@@ -504,6 +504,7 @@
 
 .dline__art { width: 46px; height: 52px; }
 .dline__art svg { width: 100%; height: 100%; }
+.dline__art img { width: 100%; height: 100%; object-fit: contain; padding: 3px; border-radius: 10px; background: #fff; }
 .dline b { display: block; font-size: .88rem; font-weight: 700; line-height: 1.25; }
 .dline span { font-size: .78rem; color: color-mix(in srgb, var(--cream) 55%, transparent); }
 
