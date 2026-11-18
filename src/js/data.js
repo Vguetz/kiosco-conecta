@@ -249,10 +249,10 @@ export const PRODUCTOS = [
 export const SOCIAS = [
   {
     nombre: "Candela",
-    rol: "Compras y proveedores",
+    rol: "Marketing y atención al cliente",
     avatar: "candela.webp",
     frase:
-      "Elijo cada producto pensando en lo que el barrio realmente necesita.",
+      "Te respondemos rápido y contamos lo que hacemos para que cada compra tenga sentido.",
     art: {
       skin: "#E9BE9B",
       hair: "#3B2418",
@@ -263,9 +263,10 @@ export const SOCIAS = [
   },
   {
     nombre: "Nicole",
-    rol: "Redes y comunicación",
+    rol: "Compras y ventas",
     avatar: "nicol.webp",
-    frase: "Contamos lo que hacemos para que cada compra tenga sentido.",
+    frase:
+      "Elijo cada producto pensando en lo que el barrio realmente necesita.",
     art: {
       skin: "#C98A63",
       hair: "#1F1310",
@@ -276,9 +277,9 @@ export const SOCIAS = [
   },
   {
     nombre: "Avril",
-    rol: "Envíos y logística",
+    rol: "Administración y finanzas",
     avatar: "avril.webp",
-    frase: "Si está a menos de quince cuadras, te llega calentito.",
+    frase: "Cuento cada peso para que el kiosco crezca y la causa también.",
     art: {
       skin: "#F0D0B4",
       hair: "#7B4A22",
@@ -289,7 +290,7 @@ export const SOCIAS = [
   },
   {
     nombre: "Sintia",
-    rol: "Causa solidaria",
+    rol: "Marketing y atención al cliente",
     avatar: "no-tiene-tia.webp",
     frase:
       "Cada mes armamos los desayunos que se reparten en el Instituto Superior de Comercio La Blanqueada.",
