@@ -483,6 +483,10 @@
   position: relative;
   height: clamp(120px, 14vw, 158px);
   display: grid;
+  /* fila de alto definido: sin esto el height:100% de la foto no se resuelve
+     y la imagen toma el ancho de la tarjeta, desbordando sobre el texto */
+  grid-template-rows: 100%;
+  grid-template-columns: 100%;
   place-items: center;
 }
 .card__art .art {
@@ -496,6 +500,8 @@
 /* Foto real del producto: fondo blanco en una placa redondeada */
 .card__photo {
   height: 100%;
+  width: auto;
+  max-height: 100%;
   aspect-ratio: 1;
   object-fit: contain;
   padding: 8px;

@@ -56,6 +56,8 @@
   .card__art { height: 108px; }
   .card__name { font-size: .84rem; }
   .card__price { font-size: 1.15rem; }
+  /* la foto ocupa todo el ancho como una placa blanca pareja */
+  .card__photo { width: 100%; aspect-ratio: auto; padding: 10px; border-radius: 14px; }
   .order-cta { flex-direction: column; align-items: stretch; }
   .order-cta .btn { width: 100%; }
   .envios__moto { position: static; margin-top: 6px; }
@@ -65,8 +67,27 @@
 }
 
 @media (max-width: 420px) {
-  .grid { grid-template-columns: 1fr; }
-  .card__art { height: 132px; }
+  /* una columna: tarjeta horizontal (foto | info, precio + botón abajo) */
+  .grid { grid-template-columns: 1fr; gap: 10px; }
+  .card {
+    grid-template-columns: 92px 1fr;
+    grid-template-rows: 1fr auto;
+    column-gap: 14px;
+    row-gap: 6px;
+    align-items: center;
+    padding: 10px 12px 10px 10px;
+    border-radius: 18px;
+  }
+  .card::before { left: 56px; top: 50%; margin-top: -75px; }
+  .card__art { grid-row: 1 / 3; width: 92px; height: 92px; }
+  .card__photo { width: 92px; height: 92px; aspect-ratio: 1; padding: 8px; border-radius: 13px; }
+  .card__info { align-self: end; }
+  .card__name { font-size: .9rem; }
+  .card__foot { align-self: start; margin-top: 0; }
+  .card__add { width: 36px; height: 36px; }
+  .card__tag { top: 6px; left: 6px; padding: 3px 7px; font-size: .48rem; letter-spacing: .1em; }
+  /* en táctil, sin el giro/salto de hover */
+  .card:hover .card__photo, .card:hover .card__art .art { transform: none; }
   .pillars { grid-template-columns: 1fr; }
 }
 

@@ -58,7 +58,7 @@ export function cardMarkup(p) {
           ? `<img class="card__photo" src="${p.img}" alt="" loading="lazy" decoding="async">`
           : renderArt(p.art, p.opts)
       }</span>
-      <span>
+      <span class="card__info">
         <span class="card__cat">${cat ? cat.nombre : ""}</span>
         <span class="card__name">${p.nombre}</span>
       </span>
