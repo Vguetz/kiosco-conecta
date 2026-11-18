@@ -295,11 +295,17 @@
   transition: transform .6s var(--ease-out), opacity .5s;
 }
 
-.socia:hover { border-color: var(--purple); box-shadow: 0 24px 48px rgb(95 43 168 / .22); }
-.socia:hover::before { transform: translateY(0) scale(1); opacity: 1; }
-.socia:hover .socia__rol { color: var(--yellow); }
-.socia:hover .socia__frase { color: #fff; }
-.socia:hover .socia__nombre { background: var(--yellow); color: var(--ink); }
+/* hover solo con mouse: en pantallas táctiles el :hover queda "pegado" al
+   scrollear y, como la mancha violeta no cubre toda la tarjeta, el texto
+   blanco queda sobre fondo blanco y no se lee */
+@media (hover: hover) and (pointer: fine) {
+  .socia:hover { border-color: var(--purple); box-shadow: 0 24px 48px rgb(95 43 168 / .22); }
+  .socia:hover::before { transform: translateY(0) scale(1); opacity: 1; }
+  .socia:hover .socia__rol { color: var(--yellow); }
+  .socia:hover .socia__frase { color: #fff; }
+  .socia:hover .socia__nombre { background: var(--yellow); color: var(--ink); }
+  .socia:hover .socia__avatar { transform: scale(1.06) translateY(-4px); border-color: var(--yellow); }
+}
 
 .socia__avatar {
   position: relative;
@@ -316,7 +322,6 @@
   border: 3px solid var(--purple);
   transition: transform .55s var(--ease-goo), border-color .4s;
 }
-.socia:hover .socia__avatar { transform: scale(1.06) translateY(-4px); border-color: var(--yellow); }
 .socia__avatar svg { width: 100%; height: 100%; }
 
 .socia__nombre {
