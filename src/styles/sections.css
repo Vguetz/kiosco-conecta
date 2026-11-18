@@ -309,6 +309,9 @@
   height: auto;
   object-fit: cover;
   object-position: center 22%;
+  /* las fotos son recortes con fondo transparente: este es el fondo común
+     de todas las integrantes (cambiarlo acá lo cambia para las cuatro) */
+  background: var(--cream-2);
   overflow: hidden;
   border: 3px solid var(--purple);
   transition: transform .55s var(--ease-goo), border-color .4s;
