@@ -179,12 +179,18 @@ export function initScrollAnimations() {
 
   /* tarjetas de producto */
   const grid = document.querySelector('[data-grid]');
-  if (grid) {
+  if (grid && !reduced) {
+    /* arrancan ocultas y se revelan UNA sola vez: sin `once`, cada vez que
+       una tarjeta volvía a entrar en pantalla se reseteaba a opacidad 0 y se
+       animaba de nuevo, y al scrollear rápido parecía que "recargaban" */
+    gsap.set(grid.children, { y: 46, opacity: 0, scale: 0.95 });
     ScrollTrigger.batch(grid.children, {
       start: 'top 92%',
-      onEnter: (batch) => gsap.from(batch, {
-        y: 46, opacity: 0, scale: 0.95,
+      once: true,
+      onEnter: (batch) => gsap.to(batch, {
+        y: 0, opacity: 1, scale: 1,
         duration: 0.7, ease: 'power3.out', stagger: 0.06, overwrite: true,
+        clearProps: 'transform',
       }),
     });
   }
